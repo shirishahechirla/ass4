@@ -1,0 +1,36 @@
+#4
+# Define the weights and inputs as provided
+weights = [0.1, 0.2, 0.3, 0.4]
+input_sets = [
+    {'w': 0, 'x': 0, 'y': 1, 'z': 0},
+    {'w': 0, 'x': 1, 'y': 0, 'z': 0},
+    {'w': 0, 'x': 1, 'y': 1, 'z': 0},
+    {'w': 0, 'x': 1, 'y': 0, 'z': 1},
+    {'w': 1, 'x': 1, 'y': 0, 'z': 1},
+    {'w': 1, 'x': 1, 'y': 1, 'z': 0}
+]
+
+# Thresholds
+threshold_low = 0.35
+threshold_high = 0.55
+
+# Calculate the weighted sum for each input set and check if it's between the two thresholds
+results = {}
+for i, input_set in enumerate(input_sets, start=1):
+    weighted_sum = sum(input_set[k] * w for k, w in zip(input_set, weights))
+    # Check if the weighted sum is more than 0.35 and not more than 0.55
+    if threshold_low < weighted_sum <= threshold_high:
+        results[f'option_{chr(96+i)}'] = "Output is 1 for t=0.35 but not for t=0.55"
+    else:
+        results[f'option_{chr(96+i)}'] = "Does not meet condition"
+
+results
+
+{'option_a': 'Does not meet condition',
+ 'option_b': 'Does not meet condition',
+ 'option_c': 'Output is 1 for t=0.35 but not for t=0.55',
+ 'option_d': 'Does not meet condition',
+ 'option_e': 'Does not meet condition',
+ 'option_f': 'Does not meet condition'}
+
+ #5
