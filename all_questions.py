@@ -8,16 +8,16 @@ def question1():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = "yes"
+    answers["(b)"] = "yes"
+    answers["(c)"] = "yes"
+    answers["(d)"] = "no"
 
     # explain-string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "The person is classified as a defaulted borrower (DB = Yes) because they are a home owner, which matches Rule 1."
+    answers["(b) explain"] = "The person is classified as a defaulted borrower (DB = Yes) because they are single, which matches Rule 2."
+    answers["(c) explain"] = "The person is classified as a defaulted borrower (DB = Yes) because they have a low annual income, which matches Rule 3."
+    answers["(d) explain"] = "The person's employment status is not directly mentioned in the rules to infer default, but since they are employed, Rule 4 does not apply, and they are still a defaulted borrower based on other attributes."
 
     return answers
 
