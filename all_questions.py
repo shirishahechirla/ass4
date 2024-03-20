@@ -59,16 +59,16 @@ def question7():
     answers = {}
 
     # bool: True/False
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = True
+    answers["(b)"] = True
+    answers["(c)"] = True
+    answers["(d)"] = False
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "In back-propagation, the gradient for weights in layer k+1 is calculated using the gradient of weights in layer k via the chain rule."
+    answers["(b) explain"] = "The activations at the k+1th layer are computed using the activations from the kth layer, as each layer feeds into the next."
+    answers["(c) explain"] = "The vanishing gradient problem describes the situation where gradients become too small to effectively update the weights, leading to little or no improvement in the training error."
+    answers["(d) explain"] = "Even if the ANN model perfectly classifies all training instances, the gradients of loss with respect to the weights will be close to zero, not exactly zero, as the learning process typically stops based on a convergence threshold, not an exact zero loss."
 
     return answers
 
@@ -78,32 +78,32 @@ def question8():
 
 
     # float
-    answers["(a) P(X_1 = 1 | +)"] = None
-    answers["(a) P(X_1 = 1 | -)"] = None
-    answers["(a) P(X_2 = 1 | +)"] = None
-    answers["(a) P(X_2 = 1 | -)"] = None
-    answers["(a) P(X_3 = 1 | +)"] = None
-    answers["(a) P(X_3 = 1 | -)"] = None
+    answers["(a) P(X_1 = 1 | +)"] = 0.4
+    answers["(a) P(X_1 = 1 | -)"] = 0.6
+    answers["(a) P(X_2 = 1 | +)"] = 0.5
+    answers["(a) P(X_2 = 1 | -)"] = 0.5
+    answers["(a) P(X_3 = 1 | +)"] = 0.5
+    answers["(a) P(X_3 = 1 | -)"] = 0.0
 
     # string
     answers["(b) label"] = None
 
     # float
-    answers["(c) P(X_1=1)"] = None
-    answers["(c) P(X_2=1)"] = None
-    answers["(c) P(X_1=1,X_2=1)"] = None
+    answers["(c) P(X_1=1)"] = 0.5
+    answers["(c) P(X_2=1)"] = 0.5
+    answers["(c) P(X_1=1,X_2=1)"] = 0.2
 
     # string: "dependent" or "independent"
-    answers["(c) Relationship between X_1 and X_2"] = None
+    answers["(c) Relationship between X_1 and X_2"] = "dependent"
 
     # float
     answers["(d) P(A=1)"] = None
     answers["(e) P(X_1=1, X_2=1|Class=+)"] = None
-    answers["(e) P(X_1=1|Class=+)"] = None
-    answers["(e) P(X_2=1|Class=+)"] = None
+    answers["(e) P(X_1=1|Class=+)"] = 0.4
+    answers["(e) P(X_2=1|Class=+)"] = 0.5
 
     # string: "yes" or "no"
-    answers["(e) A and B conditionally independent?"] = None
+    answers["(e) A and B conditionally independent?"] = "no"
 
     # float
     answers["(d) Training error rate"] = None
@@ -115,12 +115,12 @@ def question9():
     answers = {}
 
     # int
-    answers["(a) K"] = None
-    answers["(b) K"] = None
+    answers["(a) K"] = 1  # In scenario (a), a small K value like 1 is appropriate due to clear separation between classes.
+    answers["(b) K"] = "A smaller K captures the local structure well when classes are clearly separable."
 
     # explain_string
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
+    answers["(a) explain"] = 5  # Choosing 5 as a balance between too much noise and too much bias.
+    answers["(b) explain"] = "A larger K provides smoother boundaries and is more robust to noise and outliers."
 
     return answers
 
