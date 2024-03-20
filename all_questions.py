@@ -27,16 +27,16 @@ def question2():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = "no"
+    answers["(b)"] = "yes"
+    answers["(c)"] = "yes"
+    answers["(d)"] = "no"
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "No, the rules are not mutually exclusive because more than one rule can apply to a vertebrate. For example, a bat is warm-blooded and does not give birth, which could classify it as a mammal and also as a bird."
+    answers["(b) explain"] = "Yes, the rules are exhaustive for the provided data, as they cover all combinations of the attributes for classification."
+    answers["(c) explain"] = "Yes, ordering is needed to prevent misclassification, such as the need to apply the rule for mammals before the rule for birds to classify a bat correctly."
+    answers["(d) explain"] = "No, a default class is not necessary for the provided data since the rules are exhaustive. However, it could be considered for any future data where vertebrates may not fit the current rules."
 
     return answers
 # -----------------------------------------------------------
@@ -44,14 +44,14 @@ def question3():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
+    answers["(a)"] = "no"
+    answers["(b)"] = "yes"
+    answers["(c)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = None
-    answers["(b) example"] = None
-    answers["(c) example"] = None
+    answers["(a) example"] = "could be classified as both a mammal (by R3) and a reptile (by R4), showing the rules are not mutually exclusive."
+    answers["(b) example"] = "such as a human who is warm-blooded and is therefore classified as a mammal by R3."
+    answers["(c) example"] = "If R4 is applied before R3, a warm-blooded animal that does not give birth and is not an aerial."
 
     return answers
 # -----------------------------------------------------------
