@@ -99,13 +99,13 @@ def question8():
 
     # For each row give the class predicted by the model after training using Naive Bayes
     # String: either '+' or '-'
-    answers["(d) Row 1"] = ""
-    answers["(d) Row 2"] = ""
-    answers["(d) Row 3"] = ""
-    answers["(d) Row 4"] = ""
+    answers["(d) Row 1"] = "+"
+    answers["(d) Row 2"] = "-"
+    answers["(d) Row 3"] = "-"
+    answers["(d) Row 4"] = "-"
 
     # float between 0 and 1
-    answers["(d) Training error rate"] = 0.0
+    answers["(d) Training error rate"] = 0.25
 
     return answers
 
@@ -140,8 +140,8 @@ def question10():
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
-    answers["(b) P(+|R)"] = 0.0 
-    answers["(b) P(R|+)"] = 0.0
+    answers["(b) P(+|R)"] = 1.0
+    answers["(b) P(R|+)"] = 0.2
     answers["(b) P(R|-)"] = 0.0
 
     # string, '+' or '-'
