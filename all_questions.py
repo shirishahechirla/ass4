@@ -8,37 +8,39 @@ def question1():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = "yes"
-    answers["(b)"] = "yes"
+    answers["(a)"] = "no"
+    answers["(b)"] = "no"
     answers["(c)"] = "yes"
-    answers["(d)"] = "no"
+    answers["(d)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) explain"] = "The person is classified as a defaulted borrower (DB = Yes) because they are a home owner, which matches Rule 1."
-    answers["(b) explain"] = "The person is classified as a defaulted borrower (DB = Yes) because they are single, which matches Rule 2."
-    answers["(c) explain"] = "The person is classified as a defaulted borrower (DB = Yes) because they have a low annual income, which matches Rule 3."
-    answers["(d) explain"] = "The person's employment status is not directly mentioned in the rules to infer default, but since they are employed, Rule 4 does not apply, and they are still a defaulted borrower based on other attributes."
+    answers["(a) explain"] = "The rules are not mutually exclusive because more than one rule can apply to a single case. For example, a single homeowner would trigger both Rule 1 and Rule 2."
+    answers["(b) explain"] = "The rule set is not exhaustive because there are possible attribute combinations not covered by the rules. For instance, a married homeowner with a medium income and employment status is not addressed."
+    answers["(c) explain"] = "Ordering is needed because the rules are not mutually exclusive, and applying them in different sequences can affect the classification outcome."
+    answers["(d) explain"] = "A default class is needed for any instances that don't match any of the provided rules, to ensure a complete classification coverage."
 
     return answers
 
 
 # -----------------------------------------------------------
+"""
 def question2():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = "no"
-    answers["(b)"] = "yes"
-    answers["(c)"] = "yes"
-    answers["(d)"] = "no"
+    answers["(a)"] = None
+    answers["(b)"] = None
+    answers["(c)"] = None
+    answers["(d)"] = None
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = "No, the rules are not mutually exclusive because more than one rule can apply to a vertebrate. For example, a bat is warm-blooded and does not give birth, which could classify it as a mammal and also as a bird."
-    answers["(b) explain"] = "Yes, the rules are exhaustive for the provided data, as they cover all combinations of the attributes for classification."
-    answers["(c) explain"] = "Yes, ordering is needed to prevent misclassification, such as the need to apply the rule for mammals before the rule for birds to classify a bat correctly."
-    answers["(d) explain"] = "No, a default class is not necessary for the provided data since the rules are exhaustive. However, it could be considered for any future data where vertebrates may not fit the current rules."
+    answers["(a) explain"] = None
+    answers["(b) explain"] = None
+    answers["(c) explain"] = None
+    answers["(d) explain"] = None
 
     return answers
+"""
 # -----------------------------------------------------------
 def question3():
     answers = {}
