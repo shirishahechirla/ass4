@@ -46,14 +46,14 @@ def question3():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = "no"
-    answers["(b)"] = "yes"
-    answers["(c)"] = "yes"
+    answers["(a)"] = "yes"
+    answers["(b)"] = "no"
+    answers["(c)"] = "no"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = "could be classified as both a mammal (by R3) and a reptile (by R4), showing the rules are not mutually exclusive."
-    answers["(b) example"] = "such as a human who is warm-blooded and is therefore classified as a mammal by R3."
-    answers["(c) example"] = "If R4 is applied before R3, a warm-blooded animal that does not give birth and is not an aerial."
+    answers["(a) example"] = "To guarantee that the rules don't overlap, each one must classify distinctly different groups based on unique attribute combinations. They seem to be exclusive in how they differentiate between groups like birds, fish, mammals, and reptiles."
+    answers["(b) example"] = "The rules do not include a category for amphibians; hence, an organism like a salamander would remain unclassified. This suggests that the rule set does not cover all possibilities within the dataset, as it lacks a classification for each type of vertebrate."
+    answers["(c) example"] = "Since every rule pertains to a distinct group and there's no intersection between them, the order of application doesn't affect the outcome of the classification. Therefore, the ordering of the rules is not a concern."
 
     return answers
 # -----------------------------------------------------------
@@ -63,13 +63,13 @@ def question7():
     # bool: True/False
     answers["(a)"] = True
     answers["(b)"] = True
-    answers["(c)"] = True
+    answers["(c)"] = False
     answers["(d)"] = False
 
     # explain_string: explanation in english prose
     answers["(a) explain"] = "In back-propagation, the gradient for weights in layer k+1 is calculated using the gradient of weights in layer k via the chain rule."
     answers["(b) explain"] = "The activations at the k+1th layer are computed using the activations from the kth layer, as each layer feeds into the next."
-    answers["(c) explain"] = "The vanishing gradient problem describes the situation where gradients become too small to effectively update the weights, leading to little or no improvement in the training error."
+    answers["(c) explain"] = "The vanishing gradient issue leads to minimal updates in a network's early layers, impeding learning. If training errors are nil but test errors are high, it points to overfitting, not vanishing gradients."
     answers["(d) explain"] = "Even if the ANN model perfectly classifies all training instances, the gradients of loss with respect to the weights will be close to zero, not exactly zero, as the learning process typically stops based on a convergence threshold, not an exact zero loss."
 
     return answers
@@ -117,12 +117,12 @@ def question9():
     answers = {}
 
     # int
-    answers["(a) K"] = 1  # In scenario (a), a small K value like 1 is appropriate due to clear separation between classes.
-    answers["(b) K"] = "A smaller K captures the local structure well when classes are clearly separable."
+    answers["(a) K"] = 5  
+    answers["(b) K"] = 50
 
     # explain_string
-    answers["(a) explain"] = 5  # Choosing 5 as a balance between too much noise and too much bias.
-    answers["(b) explain"] = "A larger K provides smoother boundaries and is more robust to noise and outliers."
+    answers["(a) explain"] = "Choosing k=5 strikes a balance by taking into account several nearest neighbors, which reduces the influence of noise and atypical data points. This choice is less prone to random variations than k=1, and it preserves local data patterns better than higher k values like 50, which might over-generalize."
+    answers["(b) explain"] = "In scenarios where classes significantly intersect, opting for a higher K value can be beneficial. This approach lessens the dependence on nearest neighbors, which might not be reliable indicators due to the overlap. A higher K value helps in forming a more consistent decision boundary in these mixed areas."
 
     return answers
 
@@ -131,54 +131,54 @@ def question10():
     answers = {}
 
     # float
-    answers["(a) P(A=1|+)"] = None
-    answers["(a) P(B=1|+)"] = None
-    answers["(a) P(C=1|+)"] = None
-    answers["(a) P(A=1|-)"] = None
-    answers["(a) P(B=1|-)"] = None
-    answers["(a) P(C=1|-)"] = None
+    answers["(a) P(A=1|+)"] = 0.6
+    answers["(a) P(B=1|+)"] = 0.4
+    answers["(a) P(C=1|+)"] = 0.8
+    answers["(a) P(A=1|-)"] = 0.4
+    answers["(a) P(B=1|-)"] = 0.4
+    answers["(a) P(C=1|-)"] = 0.2
 
     # type: explanatory string
     answers["(a) P(A=1|+) explain your answer"] = None
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
-    answers["(b) P(+|R)"] = None  # WRONG
-    answers["(b) P(R|+)"] = None
-    answers["(b) P(R|-)"] = None
+    answers["(b) P(+|R)"] = 0.0 
+    answers["(b) P(R|+)"] = 0.0
+    answers["(b) P(R|-)"] = 0.0
 
     # string, '+' or '-'
-    answers["(b) class label"] = None
+    answers["(b) class label"] = "+"
 
     # explain_string
     answers["(b) Explain your reasoning"] = None
   
     # float
-    answers["(c) P(A=1)"] = None
-    answers["(c) P(B=1)"] = None
-    answers["(c) P(A=1,B=1)"] = None
+    answers["(c) P(A=1)"] = 0.5
+    answers["(c) P(B=1)"] = 0.4
+    answers["(c) P(A=1,B=1)"] = 0.2
 
     # type: string, 'yes' or 'no'
-    answers["(c) A independent of B?"] = None
+    answers["(c) A independent of B?"] = "yes"
   
     # type: float
-    answers["(d) P(A=1)"] = None
-    answers["(d) P(B=0)"] = None
-    answers["(d) P(A=1,B=0)"] = None
+    answers["(d) P(A=1)"] = 0.5
+    answers["(d) P(B=0)"] = 0.6
+    answers["(d) P(A=1,B=0)"] = 0.3
 
     # type: string: 'yes' or 'no'
-    answers["(d) A independent of B?"] = None
+    answers["(d) A independent of B?"] = "yes"
   
     # type: float
-    answers["(e) P(A=1,B=1|+)"] = None
-    answers["(e) P(A=1|+)"] = None
-    answers["(e) P(B=1|+)"] = None
+    answers["(e) P(A=1,B=1|+)"] = 0.2
+    answers["(e) P(A=1|+)"] = 0.6
+    answers["(e) P(B=1|+)"] = 0.4
 
     # type: string: 'yes' or 'no'
-    answers["(e) A independent of B given class +?"] = None
+    answers["(e) A independent of B given class +?"] = "no"
 
     # type: explanatory string
-    answers["(e) A and B conditionally independent given class +, explain"] =  None
+    answers["(e) A and B conditionally independent given class +, explain"] =   "A and B conditionally not independent"
   
     return answers
 # --------------------------------------------------------
