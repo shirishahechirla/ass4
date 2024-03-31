@@ -136,19 +136,19 @@ def question10():
     answers["(a) P(C=1|-)"] = 0.2
 
     # type: explanatory string
-    answers["(a) P(A=1|+) explain your answer"] = None
+    answers["(a) P(A=1|+) explain your answer"] = "The probability of P(A=1|+) at 0.6 demonstrates the frequency of A's occurrence under positive conditions, suggesting a more pronounced connection to positive outcomes than negative ones."
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
-    answers["(b) P(+|R)"] = 1.0
+    answers["(b) P(+|R)"] = 1.0 
     answers["(b) P(R|+)"] = 0.2
     answers["(b) P(R|-)"] = 0.0
 
     # string, '+' or '-'
-    answers["(b) class label"] = "+"
+    answers["(b) class label"] = '+'
 
-    # explain_string
-    answers["(b) Explain your reasoning"] = None
+    # string, '+' or '-'
+    answers["(b) class label"]= '+'
   
     # float
     answers["(c) P(A=1)"] = 0.5
@@ -156,7 +156,7 @@ def question10():
     answers["(c) P(A=1,B=1)"] = 0.2
 
     # type: string, 'yes' or 'no'
-    answers["(c) A independent of B?"] = "yes"
+    answers["(c) A independent of B?"] = 'yes'
   
     # type: float
     answers["(d) P(A=1)"] = 0.5
@@ -164,7 +164,7 @@ def question10():
     answers["(d) P(A=1,B=0)"] = 0.3
 
     # type: string: 'yes' or 'no'
-    answers["(d) A independent of B?"] = "yes"
+    answers["(d) A independent of B?"] = 'yes'
   
     # type: float
     answers["(e) P(A=1,B=1|+)"] = 0.2
@@ -172,10 +172,11 @@ def question10():
     answers["(e) P(B=1|+)"] = 0.4
 
     # type: string: 'yes' or 'no'
-    answers["(e) A independent of B given class +?"] = "no"
+    answers["(e) A independent of B given class +?"] = 'No'
+    
 
     # type: explanatory string
-    answers["(e) A and B conditionally independent given class +, explain"] =   "A and B conditionally not independent"
+    answers["(e) A and B conditionally independent given class +, explain"] =  "Given that the equality does not hold here (0.2 ≠ 0.24), it suggests that A and B exhibit a certain level of dependence under the condition of being positive."
   
     return answers
 # --------------------------------------------------------
